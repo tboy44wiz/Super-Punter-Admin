@@ -1,0 +1,20 @@
+@import "src/assets/styles/GlobalStyle";
+
+.AppFooterComp {
+  height: 60px;
+  width: $fullWidth;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .copy-right {
+    text-align: center;
+    color: $iconColor;
+
+    a {
+      margin-left: 10px;
+      text-decoration: none;
+    };
+  };
+};

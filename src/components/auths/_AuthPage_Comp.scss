@@ -1,0 +1,112 @@
+@import "../../assets/styles/GlobalStyle";
+
+
+.AuthPageComp {
+  height: $deviceHeight;
+  background: linear-gradient(rgba(0, 37, 36, 0.8), rgba(0, 37, 36, 0.9)),
+  url("../../assets/images/app_background2.jpg") center no-repeat #004547cc;
+  background-size: cover;
+
+  .main__wrapper {
+    height: $fullHeight;
+    width: $fullWidth;
+    position: relative;
+
+    .header__wrapper {
+      height: auto;
+      width: 150px;
+      padding: 20px 30px;
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .form__wrapper {
+      height: $fullHeight;
+      width: $fullWidth;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .login__form {
+        width: 400px;
+        padding: 30px 25px;
+        background: linear-gradient(rgba(0, 37, 36, 0.5), rgba(0, 0, 0, 0.5));
+
+        .form__heading {
+          color: $colorWhite;
+          text-align: center;
+          font-weight: bolder;
+
+          &::before, &::after {
+            content: "";
+            height: 2px;
+            width: 20px;
+            margin: 0 3px;
+            background: rgb(0, 148, 141);
+            display: inline-block;
+          };
+        };
+
+        .form-group {
+          margin-top: 20px;
+
+          .form__label {
+            color: $colorWhite;
+            font-weight: bold;
+          };
+          .input-box__wrapper {
+            width: $fullWidth;
+            display: flex;
+            margin-top: 5px;
+
+            .form__input {
+              height: 45px;
+              min-width: $fullWidth;
+              border: none;
+              border-radius: 50px;
+              box-sizing: border-box;
+              background: rgba(85, 85, 85, 0.5);
+              color: $secondaryColor;
+              font-size: $fontSize;
+              padding: 0 10px;
+
+              &::placeholder {
+                color: $linkColorHover;
+              };
+
+              &:focus {
+                box-shadow: none
+              }
+            };
+
+            .input--icons--suffix {
+              min-width: 45px;
+              margin-left: -45px;
+              color: $secondaryColor;
+              cursor: pointer;
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            };
+          };
+        };
+
+        .login__button {
+          height: 40px;
+          width: $fullWidth;
+          margin-top: 20px;
+          background: linear-gradient(45deg, rgb(0, 92, 87), rgb(0, 48, 48));
+          border: none;
+          border-radius: 20px;
+          color: $secondaryColor;
+          font-weight: bold;
+          cursor: pointer;
+        };
+      };
+    };
+  };
+};

@@ -1,0 +1,33 @@
+@import "src/assets/styles/GlobalStyle";
+
+.AppLayoutComp {
+  height: min-content;
+  width: $fullWidth;
+  background: $secondaryColor;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: [col-start] $fullWidth [col-end];
+  grid-template-rows: [header-start] min-content [header-end body-start] 1fr [body-end footer-start] min-content [footer-end];
+
+  /*========= HEADER =========*/
+  header {
+    grid-column: col-start / col-end;
+    grid-row: header-start / header-end;
+  };
+
+
+  /*========= BODY =========*/
+  .AppBody__wrapper {
+    grid-column: col-start / col-end;
+    grid-row: body-start / body-end;
+  }
+
+
+  /*========= FOOTER =========*/
+  footer {
+    grid-column: col-start / col-end;
+    grid-row: footer-start / footer-end;
+  };
+};

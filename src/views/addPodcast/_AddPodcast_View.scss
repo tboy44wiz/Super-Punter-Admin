@@ -1,0 +1,223 @@
+@import "../../assets/styles/_GlobalStyle.scss";
+
+.AddPodcastView {
+    height: auto;
+    width: $fullWidth;
+    padding: 130px 0 60px 0;
+
+    // background: pink;
+
+    .AddPodcastView-main__wrapper {
+        overflow-y: scroll;
+        padding-bottom: 20px;
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: $secondaryColor;
+        };
+        &::-webkit-scrollbar {
+            width: 0;
+        };
+
+
+        /*==== Page Title ====*/
+        .page__title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: bold;
+            color: $primaryColor;
+
+            &::after {
+                content: "";
+                height: 2px;
+                width: 20px;
+                margin: 0 3px;
+                background: red;
+                display: inline-block;
+            };
+        };
+
+        /*==== Back to Home ====*/
+        .back-to-home__link {
+            .back-arror__icon {
+                margin-right: 5px;
+            };
+        };
+
+        /*=== Podcast Form ===*/
+        .form__wrapper {
+            box-shadow: 0 6px 12px 0 rgba(14,30,37,.12);
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 30px;
+
+            .podcast__form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 2rem;
+
+                .form-group {
+                    margin-bottom: 10px;
+    
+                    .form__label {
+                        font-weight: bold;
+                    };
+
+                    .input-box__wrapper {
+                        width: $fullWidth;
+                        display: flex;
+                        margin-top: 5px;
+
+                        .form__input {
+                            height: 45px;
+                            min-width: $fullWidth;
+                            border: none;
+                            border-radius: 5px;
+                            box-sizing: border-box;
+                            background: rgba(208, 220, 221, 0.24);
+                            color: $primaryColor;
+                            font-size: $fontSize;
+                            padding: 0 15px;
+
+                            &::placeholder {
+                                color: $linkColorHover;
+                            };
+
+                            &:focus {
+                                box-shadow: none
+                            };
+                        };
+                        .input--icons--suffix {
+                            min-width: 45px;
+                            margin-left: -45px;
+                            color: $primaryColor;
+                            cursor: pointer;
+              
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        };
+                    };
+                };
+                .title__form-group {
+                    grid-column: 1 / 3;
+                }
+                .punters-badge__wrapper {
+                    height: fit-content;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    gap: 5px;
+
+                    .punter__badge {
+                        background: rgba(87, 179, 254, 0.3);
+                        border-radius: 10px;
+                        padding: 5px 10px;
+
+                        .delete-badge__button {
+                            margin-left: 8px;
+                            height: 20px;
+                            cursor: pointer;
+                        }
+                    };
+                };
+
+                .video-upload__group {
+                    grid-column: 1 / 3;
+
+                    .video-upload__wrapper {
+                        width: $fullWidth;
+                        border: 1px dashed $iconColor;
+                        text-align: center;
+                        padding: 25px 0;
+
+                        .add-video__icon {
+                            height: 60px;
+                            width: 60px;
+                            margin-bottom: 10px;
+                            color: $iconColor;
+                        };
+
+                        .select-file__button {
+                            background: $iconColor;
+                            color: $secondaryColor;
+                            font-size: 1.5rem;
+                            padding: 7px 17px;
+                        };
+
+                        .video__name {
+                            margin-top: 10px
+                        };
+                    };
+
+                    .video-upload__wrapper--active {
+                        border: 1px solid $iconColor;
+                        background: rgba(14, 30, 37, .3);
+                        transition: all 0.5s
+                    }
+                };
+
+                .image-upload__group {
+                    grid-column: 1 / 3;
+                    
+                    .image-upload__wrapper {
+                        width: $fullWidth;
+                        border: 1px dashed $iconColor;
+                        text-align: center;
+                        padding: 25px 0 15px 0;
+
+                        .add-image__icon {
+                            height: 50px;
+                            width: 50px;
+                            margin-bottom: 10px;
+                            color: $iconColor;
+                        };
+
+                        p {
+                            margin-bottom: 5px;
+                        }
+
+                        .select-file__button {
+                            background: $iconColor;
+                            color: $secondaryColor;
+                            font-size: 1.5rem;
+                            margin-bottom: 10px;
+                            padding: 7px 17px;
+                        }
+                    };
+
+                    .image-upload__wrapper--active {
+                        border: 1px solid $iconColor;
+                        background: rgba(14, 30, 37, .3);
+                        transition: all 0.5s
+                    }
+                };
+
+                .upload__button {
+                    height: 45px;
+                    width: $fullWidth;
+                    margin-top: 20px;
+                    background: linear-gradient(45deg, rgb(0, 92, 87), rgb(0, 48, 48));
+                    border: none;
+                    border-radius: 5px;
+                    color: $secondaryColor;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    cursor: pointer;
+
+                    grid-column: 1 / 3;
+                };
+            };
+        };
+    };
+
+    .AddPodcastView__CircleLoader {
+        height: $deviceHeight;
+        width: $fullWidth;
+        background: rgba(1, 53, 57, 0.82);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000
+    };
+};
